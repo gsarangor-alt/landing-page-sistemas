@@ -1,64 +1,70 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistemas de Información | Tarea CSS</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* ================= GLOBAL ================= */
+body {
+    background-color: #0f172a; /* Propiedad de fondo */
+    color: #e2e8f0;            /* Propiedad de texto */
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;                 /* Propiedad de caja */
+    padding: 0;
+    line-height: 1.6;
+}
 
-    <header id="principal-header">
-        <h1>Ingeniería en Sistemas de Información</h1>
-        <p>Soluciones Digitales, Análisis y Seguridad de Datos</p>
-        <nav>
-            <a href="#analisis">Análisis</a>
-            <a href="#seguridad">Ciberseguridad</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+section {
+    width: 90%;                /* Propiedad de caja */
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px solid #334155;
+    border-radius: 12px;       /* Propiedad decorativa */
+    background: #1e293b;
+}
 
-    <main>
-        <section id="analisis">
-            <div class="content-flex">
-                <div class="text-side">
-                    <h2>Análisis de Sistemas</h2>
-                    <p>Optimización de procesos y diseño de arquitecturas robustas.</p>
-                    <ul>
-                        <li>Modelado de Datos.</li>
-                        <li>Gestión de Ciclo de Vida (SDLC).</li>
-                    </ul>
-                </div>
-                <div class="img-side">
-                    <img src="img/analisis.jpg" alt="Análisis de Sistemas">
-                </div>
-            </div>
-        </section>
+/* ================= HEADER ================= */
+#principal-header {            /* Selector de ID */
+    background-color: #1e293b;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid #38bdf8;
+}
 
-        <section id="seguridad">
-            <div class="content-flex">
-                <div class="text-side">
-                    <h2>Ciberseguridad</h2>
-                    <p>Protección de infraestructuras críticas y gestión de vulnerabilidades.</p>
-                </div>
-                <div class="img-side">
-                    <img src="img/seguridad.jpg" alt="Ciberseguridad">
-                </div>
-            </div>
-        </section>
+/* ================= NAV ================= */
+nav {
+    display: flex;             /* Propiedad de diseño */
+    justify-content: center;
+    gap: 20px;
+}
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <div class="contacto-box">
-                <p>📍 Ubicación: Quito-Ecuador</p>
-                <p>📧 Correo: gsarangor@uteq.edu.ec</p>
-            </div>
-        </section>
-    </main>
+nav a {                        /* Selector descendiente */
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    <footer>
-        <p>Desarrollado por: <strong>Daniel Sarango</strong></p>
-    </footer>
+nav a:hover {                  /* Pseudo-clase hover */
+    color: #7dd3fc;
+}
 
-</body>
-</html>
+/* ================= MAIN ================= */
+main > section {               /* Selector de hijo directo */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Propiedad decorativa */
+}
+
+section:first-child h2 {       /* Pseudo-clase first-child */
+    color: #38bdf8;
+}
+
+h2::before {                   /* Pseudo-elemento before */
+    content: "⚡ ";             /* El rayo que aparece en tu diseño */
+}
+
+.img-side img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #94a3b8;
+}
